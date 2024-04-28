@@ -1,0 +1,91 @@
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/JostRomanSemiBold.ttf");
+  font-family: "Jost";
+  font-weight: 600;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/JostRomanMedium.ttf");
+  font-family: "Jost";
+  font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/JostRomanRegular.ttf");
+  font-family: "Jost";
+  font-weight: 400;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/JostRomanBold.ttf");
+  font-family: "Jost";
+  font-weight: 700;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/DMSansBold.ttf");
+  font-family: "DM Sans";
+  font-weight: 700;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/DMSansRegular.ttf");
+  font-family: "DM Sans";
+  font-weight: 400;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/DMSansMedium.ttf");
+  font-family: "DM Sans";
+  font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/RobotoMedium.ttf");
+  font-family: "Roboto";
+  font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/RobotoRegular.ttf");
+  font-family: "Roboto";
+  font-weight: 400;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/PoppinsBold.ttf");
+  font-family: "Poppins";
+  font-weight: 700;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/InterBold.ttf");
+  font-family: "Inter";
+  font-weight: 700;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/RalewayRomanMedium.ttf");
+  font-family: "Raleway";
+  font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/InterRegular.ttf");
+  font-family: "Inter";
+  font-weight: 400;
+}
