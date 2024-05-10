@@ -43,11 +43,15 @@ export default function Events() {
     return (
        
             <div className=' m-auto '>
-                    <h1 className=' text-5xl mb-16 font-bold mt-16 py-4'>
+                    <h1 className=' text-5xl mb-8 rx font-bold mt-16 py-4'>
                         <span className=" text-primary">Events may </span>
                         <span className=" text-beige">interest you.</span>
                     </h1>           
+                    <button className=' bg-beige rounded-full py-1 px-4 text-white mb-8'>
+                    <a href="/CreatEvent">Add event</a>
+                    </button>           
                  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 ">
+                    
                 {events.map(event => (
                     <div key={event.numEv} className="bg-white rounded-lg shadow-md p-4 transition-transform duration-300 transform hover:scale-105" style={{ width: '392.43px', height: '470.06px', borderRadius: '21.57px' }}>
                         <div className="relative mb-4 " style={{ width: '347.19px', height: '221.1px', top: '22.65px', left: '10.65px', borderRadius: '19.41px' }}>
@@ -76,7 +80,6 @@ export default function Events() {
                     </div>
                 ))}
             </div>
-            <button className="rounded-full  text-whitegray bg-beige px-4 py-1 mt-8"><a href="/Addevents">Add event</a></button>
         </div>
     );
 }

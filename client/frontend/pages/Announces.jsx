@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
-import "../App.css";
+// import "../App.css";
 
 
 
@@ -40,7 +40,8 @@ const Announces = () => {
 
 
   return (
-    <div className="container mx-auto mt-40 mb-36 flex flex-col items-center"  style={{ maxHeight: "95vh", overflowY: "scroll", position: "fixed", paddingRight: "15px" }}>
+    // style={{ maxHeight: "95vh", overflowY: "scroll", position: "fixed", paddingRight: "15px" }}
+    <div className="container mx-auto mt-40 mb-36 flex flex-col items-center"  >
 
       <div className="text-center mt-6 mb-8 w-full bg-white z-10 fixed top-0">
         <button className="bg-beige rounded-full py-1 px-4 text-white mb-8">

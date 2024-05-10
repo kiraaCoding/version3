@@ -102,5 +102,24 @@ formation{
     gap: 10px;
     align-items:center ;
 } */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -200px; /* Cachez initialement la barre latérale */
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+
+
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    cursor: pointer;
+}
 
   

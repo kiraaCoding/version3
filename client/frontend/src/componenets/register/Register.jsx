@@ -34,7 +34,8 @@ export default function Register() {
         cycleEt,
        });
        console.log("weyyyy");
-       res.data && window.location.replace("/login");
+    //    res.data && window.location.replace("/login");
+       console.log(res.data);
         }
        catch(err){
         SetError(true);

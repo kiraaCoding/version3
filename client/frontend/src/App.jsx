@@ -38,6 +38,17 @@ import Publications from "../pages/Publications.jsx";
 import AddPublication from "../pages/AddPublication.jsx";
 import UpdatePublication from "../pages/UpdatePublication.jsx";
 import AccueilEnr from "./componenets/Entreprises/Accueil.jsx";
+import Announces from "../pages/Announces.jsx";
+import AddAnnounce from "../pages/AddAnnounce.jsx";
+import UpdateAnnounce from "../pages/UpdateAnnounce.jsx";
+import Stages from "../pages/Stages.jsx";
+import AddStage from "../pages/AddStage.jsx";
+import UpdateStage from "../pages/UpdateStage.jsx";
+import SujetsPFE from "../pages/SujetsPFE.jsx";
+import RegisterSys from "./componenets/register/RegisterSysRe.jsx";
+import VerifyCodePage from "./componenets/register/VerifyCodePage.jsx";
+import VerifyCodePageC from "./componenets/register/VerifyCodeC.jsx";
+import VerifyCodeCl from "./componenets/register/VerifyCodeCl.jsx";
 export default function App() {
   const {user} = useContext(Context);
   return (
@@ -72,9 +83,22 @@ export default function App() {
         <Route path="/addpublication" element={<AddPublication />} />
         <Route path="/updatepublication/:id" element={<UpdatePublication />} />
         <Route path="/AccueilEntr" element={<AccueilEnr />} />
+        <Route path="/annonce" element={<Announces />} />
+        <Route path="/addannonce" element={<AddAnnounce />} />
+        <Route path="/updateannonce/:id" element={<UpdateAnnounce />} />
 
-        
+        <Route path="/stage" element={<Stages/>}/>
+        <Route path="/addstage" element={<AddStage/>}/>
+        <Route path="/updatestage/:numS" element={<UpdateStage/>}/>
+        <Route path="/sujetpfe" element={<SujetsPFE/>}/>
 
+
+
+        <Route path="/RegisterSys" element={<RegisterSys/>}/>
+
+        <Route path="/VerifyCode" element={<VerifyCodePage/>}/>
+        <Route path="/VerifyCodeC" element={<VerifyCodePageC/>}/>
+        <Route path="/VerifyCodeCl" element={<VerifyCodeCl/>}/>
       
         
       </Routes>

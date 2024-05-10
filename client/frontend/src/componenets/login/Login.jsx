@@ -52,7 +52,7 @@ export default function Login() {
                 } catch (error) {
                     try {
                         // Check if userId is associated with enseignants table
-                        await axios.get(`http://localhost:8800/ensignants/${res.data.userId}`);
+                        await axios.get(`http://localhost:8800/enseignants/${res.data.userId}`);
                         userType = 'enseignants';
                     } catch (error) {
                         try {

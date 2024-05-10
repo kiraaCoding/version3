@@ -13,6 +13,7 @@ export default {
            'white': '#FFFFFF',
            'whitegray': '#F8F8FA',
            'bleu':'#0000ff',
+           'bleu2':'#0000f1',
            'GrayClaire':'#F5F5F5',
            'primary':"#010851",
            'secondry':"#D2B896",

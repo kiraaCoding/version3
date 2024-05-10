@@ -13,6 +13,8 @@ export default function RegisterClub() {
     const [localCl,SetLocal] = useState("");
     const [showMoreFields, setShowMoreFields] = useState(false);
     const [error,SetError] = useState(false);
+    const params = new URLSearchParams();
+
     
     const handleSubmit= async(e)=>{
        e.preventDefault();
@@ -22,6 +24,7 @@ export default function RegisterClub() {
         return;
     }
        try{
+        // eslint-disable-next-line no-unused-vars
         const res = await axios.post("http://localhost:8800/clubs",{
         nomUt,
         emailUt,
@@ -30,7 +33,16 @@ export default function RegisterClub() {
         domaineCl,
         localCl,
        });
-       res.data && window.location.replace("/login");
+       
+       params.append('nomUt', nomUt);
+        params.append('emailUt', emailUt);
+        params.append('passwordUt', passwordUt);
+        params.append('designationCl', designationCl);
+        params.append('domaineCl', domaineCl);
+        params.append('localCl', localCl);
+    //    res.data && window.location.replace("/login");
+      window.location.href = `/VerifyCodeCl?${params.toString()}`;
+
         }
        catch(err){
         SetError(true);

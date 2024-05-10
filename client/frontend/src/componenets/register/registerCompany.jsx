@@ -14,6 +14,8 @@ export default function RegisterClub() {
     const [telEntr,Setfax] = useState("");
     const [showMoreFields, setShowMoreFields] = useState(false);
     const [error,SetError] = useState(false);
+    const params = new URLSearchParams();
+
     
     const handleSubmit= async(e)=>{
        e.preventDefault();
@@ -23,6 +25,7 @@ export default function RegisterClub() {
         return;
     }
        try{
+        // eslint-disable-next-line no-unused-vars
         const res = await axios.post("http://localhost:8800/entreprises",{
         nomUt,
         emailUt,
@@ -32,7 +35,16 @@ export default function RegisterClub() {
         domaineEntr,
         telEntr,
        });
-       res.data && window.location.replace("/login");
+       params.append('nomUt', nomUt);
+       params.append('emailUt', emailUt);
+       params.append('passwordUt', passwordUt);
+       params.append('designationEntr', designationEntr);
+       params.append('siegesocEntr', siegesocEntr);
+       params.append('domaineEntr', domaineEntr);
+       params.append('telEntr', telEntr);
+
+       window.location.href = `/VerifyCodeC?${params.toString()}`;
+    //    res.data && window.location.replace("/login");
         }
        catch(err){
         SetError(true);

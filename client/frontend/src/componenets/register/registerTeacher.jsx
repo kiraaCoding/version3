@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
+
 export default function RegisterTeacher() {
     const [selectedProfile, setSelectedProfile] = useState('teacher');
     const [nomUt,SetUsername] = useState("");
@@ -13,6 +14,9 @@ export default function RegisterTeacher() {
     const [gradeEn,SetGrade] = useState("");
     const [showMoreFields, setShowMoreFields] = useState(false);
     const [error,SetError] = useState(false);
+    const params = new URLSearchParams();
+
+
     
     const handleSubmit= async(e)=>{
        e.preventDefault();
@@ -23,7 +27,8 @@ export default function RegisterTeacher() {
         return;
     }
        try{
-        const res = await axios.post("http://localhost:8800/ensignants",{
+        // eslint-disable-next-line no-unused-vars
+        const res = await axios.post("http://localhost:8800/enseignants",{
         nomUt,
         emailUt,
         passwordUt,
@@ -32,8 +37,19 @@ export default function RegisterTeacher() {
         gradeEn,
 
        });
+       params.append('nomUt', nomUt);
+        params.append('emailUt', emailUt);
+        params.append('passwordUt', passwordUt);
+        params.append('depEn', depEn);
+        params.append('numBurEn', numBurEn);
+        params.append('gradeEn', gradeEn);
+
+        window.location.href = `/VerifyCode?${params.toString()}`;
+
        console.log("weyyyy");
-       res.data && window.location.replace("/login");
+    //    res.data && window.location.replace("/login");
+    //    res.data && window.location.replace("/VerifyCodePage") ; // Rediriger vers la page de confirmation
+
         }
        catch(err){
         SetError(true);
