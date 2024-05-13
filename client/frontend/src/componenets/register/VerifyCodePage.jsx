@@ -49,6 +49,10 @@ export default function VerifyCodePage() {
             console.log(err);
         }
     };
+    useEffect(() => {
+        if (success) {
+            window.location.replace("/login");        }
+    }, [success, location]);
 
     return (
         <div className="flex flex-col mt-auto sm:flex-row items-stretch min-h-screen w-full " style={{ backgroundImage: 'linear-gradient(132.25deg, #07005C 0%, #5961F9 89.67%)' }}>
